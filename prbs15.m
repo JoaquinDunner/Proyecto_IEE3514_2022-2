@@ -5,7 +5,7 @@ function [prbs, estadoN] = prbs15(N, estado0)
     for n = 1:N
         MSB = tren(1);
         LSB = tren(15);
-        for i = 1:14            % Para todos menos para el 1, que se cambia después
+        for i = 1:14    % Para todos menos para el 1, que se cambia después
             estado(i+1) = tren(i);
         end
         % Xor

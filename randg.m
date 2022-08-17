@@ -14,6 +14,7 @@ function [g, estadoN] = randg(N, estado0)
     estadoN = eta_n;
 end
 
+
 % % randu
 %     function [u, estadoN] = randu(N, estado0)
 %         ep_n_ant = estado0;

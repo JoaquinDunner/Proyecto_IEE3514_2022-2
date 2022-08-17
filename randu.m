@@ -8,7 +8,6 @@ function [u, estadoN] = randu(N, estado0)
         estadoN_var = ep_n;
         ep_n_ant = ep_n;
     end
-
     u = u_matrix;
     estadoN = estadoN_var;
 end
