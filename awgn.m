@@ -6,7 +6,7 @@ EstadoAWGN_I = EstadoAWGN_I_crudo;
 EstadoAWGN_Q = EstadoAWGN_Q_crudo;
 
 % Paso de Eb a Es
-Es = 10^(EbNo/10) * log2(M) * 2;
+Es = sqrt(10^(EbNo/10) * log2(M) * 2);
 factor = 1/Es;
 
 n_I = (factor) .* n_I_crudo;
