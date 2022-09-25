@@ -3,8 +3,10 @@ function [s_I, s_Q] = qammod(MensajeBinario, M)
     index_s = 1;
     check = 1;
     maximum = length(MensajeBinario)/log2(M);
-    s_I = zeros(1,maximum);
-    s_Q = zeros(1,maximum);
+    s_I = zeros(1,length(MensajeBinario)/log2(M));
+    s_Q = zeros(1,length(MensajeBinario)/log2(M));
+
+%     Forma original:
     while check <= maximum
     % BPSK
     % Es = 1
@@ -20,7 +22,6 @@ function [s_I, s_Q] = qammod(MensajeBinario, M)
     % QPSK
     % Es = 4 -> alpha = 1/4
     elseif M == 4
-        alpha = 1/4;
         paquete = MensajeBinario(1,[index_mensaje : index_mensaje + 1]);
         if paquete == [0 1]
             s_I(index_s) = -1;
@@ -308,4 +309,5 @@ function [s_I, s_Q] = qammod(MensajeBinario, M)
     end
     s_I = alpha .* s_I;
     s_Q = alpha .* s_Q;
+
 end
