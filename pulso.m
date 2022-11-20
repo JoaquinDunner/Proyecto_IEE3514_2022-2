@@ -11,13 +11,6 @@ function Pulso = pulso(Nup, TipoPulso, reservado1)
             Pulso = Pulso/sqrt(Nup);
         end
 
-%         if Nup ~= 2
-%             Pulso = Pulso * 1/sqrt(Nup);
-%         elseif Nup == 2
-%             Pulso = [0 1];
-%         else
-%             Pulso = 1;
-%         end
     % Pulso cuadrado típico
     else
         if Nup ~= 2

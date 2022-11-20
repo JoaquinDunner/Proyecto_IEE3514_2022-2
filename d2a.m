@@ -8,10 +8,4 @@ function s_an = d2a(s, Nup, Pulso)
     end
     s_an = conv(s_zerostuffed,Pulso,"full");
 
-    % FUNCIONA
-%     if Nup == 2
-%         s_an = s_an/sqrt(8/3);
-%     else
-%         s_an = s_an/sqrt(Nup);
-%     end
 end
