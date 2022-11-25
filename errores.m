@@ -1,5 +1,10 @@
 function [Err_s, Err_b] = errores(MensajeBinario, MensajeBinarioRx, M)
 
+% Los hacemos del mismo largo
+% length(MensajeBinario)
+% length(MensajeBinarioRx)
+MensajeBinarioRx = MensajeBinarioRx(1:length(MensajeBinario));
+
 % Error de bit
 Err_b = sum(MensajeBinario ~= MensajeBinarioRx);
 
